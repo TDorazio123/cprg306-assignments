@@ -25,7 +25,7 @@ export function NewItem() {
             <h1 className="text-xl font-bold text-black">Add New Item</h1>
             
             <input
-                className={`flex-1 border ${!name && nameTouched ? 'border-red-500' : 'border-gray-400'} p-2 rounded text-black`}
+                className={`flex-1 border ${(!name || name.length < 2) && nameTouched ? 'border-red-500' : 'border-gray-400'} p-2 rounded text-black`}
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -34,6 +34,7 @@ export function NewItem() {
                 placeholder="Item name"
             />
             {!name && nameTouched && <p className="text-red-500">Item name is required</p>}
+            {name && name.length < 2 && nameTouched && <p className="text-red-500">Item name must be at least 2 characters</p>}
 
             <input
                 className="flex-1 border border-gray-400 p-2 rounded text-black"
