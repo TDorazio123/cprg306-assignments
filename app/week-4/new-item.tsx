@@ -60,8 +60,7 @@ export function NewItem() {
                 type="submit" 
                 onClick={handleSubmit}
                 disabled={!name || name.length < 2}
-                className="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400 
-                disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded">
+                className={"bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded"}>
                 Add Item
             </button>
         </form>
